@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>dd-d3</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link rel="icon"
+    href="data:;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+</head>
+
+<body>
+  <main>
+    <h1>The Pregnant Timetraveller's Guide to Names</h1>
+    <p>Every year, thousands of pregnant women travel uni-directionally back in time – either by choice or by mishap.
+      This interactive guide was created to help those women name their newborn companions. To help them – <em>you</em>
+      – pick a name that is not only a name of its time, but also a <strong>popular name</strong> of its time. A name
+      that allows your ChronoBaby™ to conform to its environment. A name that will not ostracize you and the child – or
+      worse, reveal you as a timetraveller. Because that is, after all, one of the most important rules to follow as a
+      responsible timetraveller: to stay low, play it safe, and to not do anything that would raise attention to your
+      time-travel shenanigans.</p>
+
+    <div class="d3-wrapper female-data">
+      <div class="input-controls">
+
+        <div class="sex-selection">
+          <div>I'm expecting a</div>
+          <button data-val="M">Boy</button>
+          <button class="selected-button" data-val="F">Girl</button>
+        </div>
+
+        <div class="decade-selection">
+          <div><span id="pronoun01">Who</span> will be born in the</div>
+          <div id="decade">
+            <div id="decade-value">1920s</div>
+            <input type="range" step="10" min="1880" max="2010" value="1920">
+          </div>
+        </div>
+
+        <div class="text-selection">
+          <div>And I'd like <span id="pronoun02">their</span> name to start with:</div>
+          <input type="text" name="q" placeholder="Enter text here..." autocomplete="off">
+        </div>
+
+      </div>
+
+      <div id="d3_chart">
+        <noscript>JavaScript needs to be enabled to create this chart.</noscript>
+        <div id="spinning-loader"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="src/d3.min.js"></script>
+  <script src="src/index.js" type="module"></script>
+</body>
+
+</html>
